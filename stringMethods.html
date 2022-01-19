@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String methods practice</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+   let txt = "ABCDEFGHIJK";
+   let length = txt.length;
+   console.log(length);
+
+   //method to extract part of a string and return it
+   let str = "Apple, Banana, Kiwi";
+   let part = str.slice(7,13); // position 13 not included
+   console.log(part); //Returns Banana(position 7-12)
+
+   //if parameter is negative, count strts from the end
+   let str2 = "Apple, Banana, Kiwi";
+   let part2 = str2.slice(-12,-6); // counts starts from 0
+   console.log(part2); // banana(from position -6 to position -11)
+   
+   // one parameter will return from that position to the end.
+   let str3 = "Apple, Banana, Kiwi";
+   let part3 = str3.slice(7); // returns Banana, Kiwi
+   console.log(part3);
+
+   let str4= "Apple, Banana, kiwi";
+   let part4 = str4.slice(-12);
+   console.log(part4);
+
+   //substring() method similar to slice()
+   //but cant accept negative indexes like slice() does
+   let str5 = "Apple, Banana, Kiwi";
+   let part5 = str5.substring(7,13);
+   console.log(part5); // Banana
+
+   //you omit 2nd parameter, it returns the rest from that position
+   let str6 = "Apple, Banana, Kiwi";
+   let part6 = str6.substring(7);
+   console.log(part6); // Banana ,Kiwi
+
+   //substr() method, 2nd parameter is for length of extracted part
+   let str7 = "Apple, Banana, Kiwi";
+   let part7 = str7.substr(7,6);
+   console.log(part7); // Banana (6 characters)
+
+   //if you omit 2nd parameter, will return the rest of the string
+   let str8 = "Apple, Banana, Kiwi";
+   let part8 = str.substr(7);
+   console.log(part8); //Banana , Kiwi
+
+   // negative parameter, counts from the end of the string
+   let str9 = "Apple, Banana, Kiwi";
+   let part9 = str.substr(-4);
+   console.log(part9); // Kiwi
+
+   //replace() method replaces a specified value with another 
+   // value in the string
+   let text = "Please visit Google";
+   let newText = text.replace("Google", "Meta");
+   console.log(newText); // Please visit meta
+
+// do a global search of a character h in a string
+   let text1 = "Is this all there is?";
+   let result = text1.match(/[h]/g);
+   console.log(result);
+
+// global search for the numbers 1-4
+let text2 = "123456789";
+let result2 = text2.match(/[1-4]/g);
+console.log(result2);
+
+//search for any of the alternatives
+let text3 = "re, green, red, green, gren, gr, blue, yellow";
+let result3 = text3.match(/(red|green)/g);
+console.log(result3);
+
+
+
+
+
+
+  </script>
+</body>
+</html>
