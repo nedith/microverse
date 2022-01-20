@@ -77,6 +77,54 @@ let text3 = "re, green, red, green, gren, gr, blue, yellow";
 let result3 = text3.match(/(red|green)/g);
 console.log(result3);
 
+//metacharacter \d finds a digit
+let text4 = "Give 100%";
+let result4 = text4.match(/\d/g);
+console.log(result4);
+
+// \s finds whitespace chracters
+let text5 = "Is this all there is?";
+let result5 = text.match(/\s/g);
+console.log(result5);
+
+// n+ matches any string that contains atleast one n
+let text6 = "Hellooo World! Hello W3Schools!"; 
+let result6 = text6.match(/o+/g);
+console.log(result6);
+
+//exec() is a regular expression method
+const obj = /e/.exec("The best things in life are free!");
+console.log(obj);
+
+// concat() joins two or more strings
+let text7 = "Hello";
+let text8 = "World!";
+let text9 = text7.concat(" ", text8);
+console.log(text9);
+// concat() can be used instead of + operator to join strings
+let textt = "Hello".concat(" ", "World");
+console.log(textt);
+
+// trim() method removes white spaces from both start and end of string
+let text11 = "     Hello World!     ";
+let text12 = text11.trim();
+console.log(text12);
+
+// padStart() and padEnd() pads start and end of string
+let pad = "5";
+let padded = pad.padEnd(4,0);
+console.log(padded); // 5000. adds 3 zeros to make 4 characters
+
+//split() turns a string into an array
+let letters = "a,b,c,d,e,f";
+const myArray = letters.split(",");
+console.log(myArray[1]);
+
+let word = "Hello";
+const myArr = word.split("");
+console.log(myArr);
+
+
 
 
 
