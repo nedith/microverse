@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>conditionals practice</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // code asking for login 
+    let userName = prompt("please login:");
+    if(userName === "Admin"){
+        let password = prompt("input password");
+        if(password === "TheMaster"){
+            alert("Welcome!");
+        } else if(password === "" || password === null){
+            alert("Cancelled");
+
+        } else {
+            alert("Wrong password");
+        }
+    }
+        if(userName === "" || userName === null){
+            alert("cancelled");
+        } else {
+            alert("I dont know you");
+        }
+     
+        
+    
+   
+
+
+  </script>
+</body>
+</html>
