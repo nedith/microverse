@@ -7,23 +7,44 @@
 <body>
   <script>
     // code asking for login 
-    let userName = prompt("please login:");
-    if(userName === "Admin"){
-        let password = prompt("input password");
-        if(password === "TheMaster"){
-            alert("Welcome!");
-        } else if(password === "" || password === null){
-            alert("Cancelled");
+    //let userName = prompt("please login:", '');
+    //if(userName === "Admin"){
+       // let password = prompt("input password", '');
+       // if(password === "TheMaster"){
+           // alert("Welcome!");
+       // } else if(password === "" || password === null){
+            //alert("Cancelled");
 
-        } else {
-            alert("Wrong password");
-        }
-    }
-        if(userName === "" || userName === null){
-            alert("cancelled");
-        } else {
-            alert("I dont know you");
-        }
+        //} else {
+            //alert("Wrong password");
+       // }
+    //}
+       // else if(userName === "" || userName === null){
+            //alert("cancelled");
+       // }
+        // else {
+           // alert("I dont know you");
+         //}
+    
+    //Ternary or conditional operator
+    //let age = prompt("Enter your age", "");
+    //let accessAllowed = (age>18)? true:false;
+    //alert(accessAllowed);
+
+    //let color =prompt("Fav color", "");
+   // let answer = (color =="Red")? "That is my fav color too!" : "I dont like " + color;
+   // alert(answer);
+
+    let value = prompt('Type a number', 0);
+
+if (value > 0) {
+  alert( 1 );
+} else if (value < 0) {
+  alert( -1 );
+} else {
+  alert( 0 );
+}
+        
      
         
     
