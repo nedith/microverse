@@ -12,6 +12,102 @@
 }
 
 favoriteAnimal('Goat')
+
+/**unction showMessage() {
+  alert( 'Hello everyone!' );
+}
+
+showMessage();
+showMessage(); */
+
+/**let userName = 'John';
+
+function showMessage() {
+  userName = "Bob"; // (1) changed the outer variable
+
+  let message = 'Hello, ' + userName;
+  alert(message);
+}
+
+alert( userName ); // John before the function call
+
+showMessage();
+
+alert( userName ); // Bob, the value was modified by the function */
+
+/**function showMessage(from, text) { // parameters: from, text
+  alert(from + ': ' + text);
+}
+
+showMessage('Ann', 'Hello!'); // Ann: Hello! (*)
+showMessage('Ann', "What's up?"); // Ann: What's up? (**) */
+
+/**function showMessage(from, text) {
+
+from = '*' + from + '*'; // make "from" look nicer
+
+alert( from + ': ' + text );
+}
+
+let from = "Ann";
+
+showMessage(from, "Hello"); // *Ann*: Hello
+
+// the value of "from" is the same, the function modified a local copy
+alert( from ); // Ann
+
+// function to check age and give access
+function checkAge(age) {
+  if (age >= 18) {
+    return true;
+  } else {
+    return confirm('Do you have permission from your parents?');
+  }
+}
+
+let age = prompt('How old are you?', 18);
+
+if ( checkAge(age) ) {
+  alert( 'Access granted' );
+} else {
+  alert( 'Access denied' );
+}
+
+//functions to show prime numbers
+function showPrimes(n) {
+
+for (let i = 2; i < n; i++) {
+  if (!isPrime(i)) continue;
+
+  alert(i);  // a prime
+}
+}
+showPrimes(10) // 2,3,5,7
+
+function isPrime(n) {
+for (let i = 2; i < n; i++) {
+  if ( n % i == 0) return false;
+}
+return true;
+}
+// function to return the least of two numbers
+ function min(a,b){
+   if (a<b){
+     return a;
+   }else
+   return b;
+ }
+   console.log (min(10,5)); */
+
+  // function that return x in power n
+  function pow(x,n){
+    let result = x**n;
+    return result;
+  }
+    x = prompt("Enter value of x: " , 0);
+   n = prompt("Enter value of n: ", 0);
+   console.log (pow(x,n));
+
    
   </script>
 </body>
