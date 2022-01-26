@@ -100,13 +100,60 @@ return true;
    console.log (min(10,5)); */
 
   // function that return x in power n
-  function pow(x,n){
+  /**function pow(x,n){
     let result = x**n;
     return result;
   }
     x = prompt("Enter value of x: " , 0);
    n = prompt("Enter value of n: ", 0);
-   console.log (pow(x,n));
+   console.log (pow(x,n)); */
+
+   /**function sayHi() {
+  alert( "Hello" );
+}
+
+alert( sayHi ); // shows the function code*/
+
+/**let age = prompt("What is your age?", 18);
+
+// conditionally declare a function
+if (age < 18) {
+
+  function welcome() {
+    alert("Hello!");
+  }
+
+}else {
+
+  function welcome() {
+    alert("Greetings!");
+  }
+  
+}
+welcome(); */
+
+let age = prompt("What is your age?", 18);
+
+let welcome;
+
+if (age < 18) {
+
+  welcome = function() {
+    alert("Hello!");
+  };
+
+} else {
+
+  welcome = function() {
+    alert("Greetings!");
+  };
+
+}
+
+welcome(); // ok now
+
+
+
 
    
   </script>
