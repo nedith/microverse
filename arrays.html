@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays practice</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+   // looping thru an array of elements
+   const fruits = ["Banana", "Orange", "Apple", "Mango"];
+   let fLen = fruits.length;
+   let list;
+for (let i = 0; i < fLen; i++) {
+    list= fruits[i];
+    console.log(list);
+}
+  console.log(list);// outside of the loop will return last value(mango)
+
+ // adding a new element to an array
+ const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+  let fruit2= fruits2.push("Kiwi");
+  console.log(fruit2); // 5 (returns the length of the array)
+  console.log(fruits2); //returns all fruits including kiwi
+
+  // merging or cancatenating arrays
+  const myGirls = ["Cecilie", "Lone"];
+  const myBoys = ["Emil", "Tobias", "Linus"];
+
+  const myChildren = myGirls.concat(myBoys)
+  console.log(myChildren);
+
+  // splice method returns array of deleted elements
+  const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+  let newFruits = fruits3.splice(2, 2, "Lemon", "Kiwi");
+  console.log(newFruits); // ["Apple","Mango"]
+  console.log(fruits3); // now returns new array.
+
+// splice() method to remove elemetns without leaving holes in the array 
+  const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+fruits5 = fruits4.splice(1, 2);
+console.log(fruits5); // ["orange", "Apple"] 
+
+//slice() method
+const fruits6 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits6.slice(1, 3);
+console.log(citrus); // ["Orange","Lemon"]
+ 
+
+
+
+
+  </script>
+</body>
+</html>
