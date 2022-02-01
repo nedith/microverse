@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>loops practice</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+// for...of loops thru a collection
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 
+              'Caracal', 'Lion'];
+
+for (const cat of cats) {
+  console.log(cat);
+}
+ //map() to do something to each item in a collection and create 
+ //a new collection containing the changed items:
+ function toUpper(string) {
+  return string.toUpperCase();
+}
+
+const cats1 = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 
+            'Caracal', 'Lion'];
+
+const upperCats = cats1.map(toUpper);
+
+console.log(upperCats);
+// [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+
+//use filter() to test each item in a collection, and create
+// a new collection containing only items that match
+function lCat(cat1) {
+  return cat1.startsWith('L');
+}
+
+const cats2 = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 
+              'Caracal', 'Lion'];
+
+const filtered = cats2.filter(lCat);
+
+console.log(filtered); // [ "Leopard", "Lion" ]
+
+//map() and filter() are both often used with function expressions
+const cats3 = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 
+              'Caracal', 'Lion'];
+
+const filtered1 = cats3.filter((cat2) => cat2.startsWith('L'));
+console.log(filtered1); // [ "Leopard", "Lion" ]
+
+//for loop for calculate the square of numbers from 1-9
+/**function calculate(){
+    for (let i=1; i<10; i++){
+        let result = i*i;
+        console.log(`${i}*${i} = ${result}\n`);
+    }
+}
+calculate()
+
+//while loop
+const myCats = ["Pete", "Biggles","Jasmin"];
+let favCats = "My cats are called";
+let i=0;
+while(i<myCats.length){
+  if(i===myCats.length-1){
+    favCats += ` and ${myCats[i]}.`;
+  } else{
+    favCats += ` ${myCats[i]}`;
+  }
+  i++;
+}console.log(favCats);*/
+
+//counting down numbers from 10 to 0 and printing them out.
+
+let i = 10;
+
+while (i >= 0) {
+ if (i === 10) {
+ console.log( `Countdown ${i}`);
+ } else if (i === 0) {
+  console.log( 'Blast off!');
+ } else {
+ console.log(i);
+ }
+
+ i--;
+}
+// looping thru a list and adding phil and lola to refused list
+// and adding the rest to admitted list
+const people =["Edith","Phil","Ian","Lola","Eva"];
+for(const person of people){
+  if(person==="Phil" || person==="Lola"){
+    let refused = `${person}, `;
+    console.log(refused);
+  }else{
+  let admitted = `${person}, `;
+  console.log(admitted);
+  }
+}
+
+//find sum of a series of numbers
+let sum = 0;
+
+/**while (true) {
+
+  let value = +prompt("Enter a number", " ");
+
+  if (!value) break; // (*)
+
+  sum += value;
+
+}
+console.log( 'Sum: ' + sum );*/
+
+//output odd numbers
+for (let j = 0; j < 10; j++) {
+
+// if true, skip the remaining part of the body
+if (j % 2 == 0) continue;
+
+console.log(j); // 1, then 3, 5, 7, 9
+}
+
+//loop to input number greater than 100
+let num;
+
+do{
+  num = prompt("Enter a number greater than 100?", 0);
+} while (num <= 100 && num);
+alert(num);
+
+
+
+
+ </script>
+</body>
+</html>      
