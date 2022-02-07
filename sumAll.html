@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum integers in a range</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+   function sumAll(a,b){
+       let sum =0;
+       let min = Math.min(a,b);
+       let max = Math.max(a,b);
+       if (!Number.isInteger(min) || !Number.isInteger(max)) return "ERROR";
+       for(let i=min; i<=max; i++){
+           sum += i;
+       }
+       return sum;
+   }
+   console.log(sumAll(1,4));
+</script>
+</body>
+</html>
