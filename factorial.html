@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial of a number</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+  function factorialize(num) {
+  let product = 1;
+  if(num ==0 || num ==1)
+  return product;
+  else{
+for(let i=num; i>=1; i--){
+ 
+    product *= i;
+  }
+  
+  }
+  return product;
+}
+
+console.log(factorialize(5));
+</script>
+</body>
+</html>
