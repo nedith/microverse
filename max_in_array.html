@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maximum in array</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+     //const array1 = [1, 3, 2, 5, 10, 20, 20, 7, 8, 20];
+
+     //console.log(Math.max(...array1)); //using spread operator(...)
+     // using aplly() method
+     //console.log(Math.max.apply(null,array1));
+
+     function birthdayCakeCandles(candles) {
+    // Write your code here
+    let max = 0;
+    let count = 0;
+    for(let i=0; i<candles.length; i++){
+        if(candles[i]> max)
+        max = candles[i];
+    }
+    for(let i=0; i<candles.length; i++){
+        if(candles[i]==max)
+        count++;
+    }
+    return count;
+    }
+    console.log(birthdayCakeCandles([2,3,1,3]));
+
+
+     
+
+</script>
+</body>
+</html>
